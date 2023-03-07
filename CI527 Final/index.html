@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NASA Image Libary Search</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+  
+  <style>
+    *{
+      margin: 0;
+    }
+    body {
+      background-color: rgb(38, 40, 47);
+    }
+    p {
+      font-family: Roboto, Arial;
+      color: white;
+    }
+    .header {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+    .search-bar {
+      background-image: url('images/stars-background.jpg');
+      background-size: fill;
+      position: absolute;
+      height: 400px;
+      top: 30%;
+      transform: translateY(-50%);
+      border: none;
+    }
+    .search-label {
+      font-size: 26px;
+      padding-top: 15px;
+      padding-left: 10px;
+      padding-right: 10px;
+      margin-bottom: 15px;
+    }
+    .search-row {
+      display: flex;
+      align-items: center;
+    }
+    #search-input {
+      flex: 1;
+      height: 44px;
+      font-size: 16px;
+      border-width: 1px;
+      border-style: solid;
+      border-color: rgb(192, 192, 192);
+      border-radius: 2px;
+      box-shadow: inset 1px 2px 3px rgba(0, 0, 0, 0.05);
+      width: 600px;
+      margin-left: 10px;
+      font-size: 20px;
+      
+    }
+    #search-input::placeholder {
+      font-family: Roboto, Arial;
+      font-size: 20px;
+    }
+    #search-button {
+      background-color: rgb(21, 65, 140);
+      height: 48px;
+      width: 66px;
+      border-width: 1px;
+      border-style: solid;
+      border-color: rgb(21, 65, 140);
+      margin-left: -3px;
+      margin-right: 10px;
+      cursor: pointer;
+    }
+    .search-icon {
+      height: 25px;
+      margin-top: 4px;
+    }
+
+
+    .image-grid{
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      column-gap: 16px;
+      row-gap: 25px;
+      
+    }
+    .image-container {
+      position: absolute;
+      top: 65%;
+    }
+  </style>
+  
+</head>
+<body>
+  <div class="container">
+    <!--Header-->
+    <div class="header">
+      <div class="search-bar">
+        <p class="search-label">Search NASA Image Libary</p>
+        <div class="search-row">
+          <input id="search-input" type="text" placeholder="Search for ... (e.g. Moon)">
+          <button id="search-button">
+            <img class="search-icon" src="images/search-icon.png">
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!--Display Images-->
+    <div class="image-container">
+      <div class="image-grid">
+      </div>
+  </div>
+    
+  </div>
+  <script src="index.js"></script>
+</body>
+</html>
